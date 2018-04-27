@@ -38,6 +38,10 @@ public class Sandwich {
         return alsoKnownAs;
     }
 
+    public String getAlsoKnownAsString() {
+        return alsoKnownAs.toString().replace("[","").replace("]", "");
+    }
+
     public void setAlsoKnownAs(List<String> alsoKnownAs) {
         this.alsoKnownAs = alsoKnownAs;
     }
@@ -68,6 +72,10 @@ public class Sandwich {
 
     public List<String> getIngredients() {
         return ingredients;
+    }
+
+    public String getIngredientsString() {
+        return ingredients.toString().replace("[","").replace("]", "");
     }
 
     public void setIngredients(List<String> ingredients) {
