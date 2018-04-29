@@ -1,5 +1,7 @@
 package com.udacity.sandwichclub.model;
 
+import android.text.TextUtils;
+
 import java.util.List;
 
 public class Sandwich {
@@ -39,7 +41,7 @@ public class Sandwich {
     }
 
     public String getAlsoKnownAsString() {
-        return alsoKnownAs.toString().replace("[","").replace("]", "");
+        return TextUtils.join(", ", alsoKnownAs);
     }
 
     public void setAlsoKnownAs(List<String> alsoKnownAs) {
@@ -75,7 +77,7 @@ public class Sandwich {
     }
 
     public String getIngredientsString() {
-        return ingredients.toString().replace("[","").replace("]", "");
+        return TextUtils.join(", ", ingredients);
     }
 
     public void setIngredients(List<String> ingredients) {
